@@ -1,6 +1,6 @@
 package com.example.analitycal.tool;
 
-import static com.example.analitycal.tool.Contstants.PATH_TO_FILE;
+import static com.example.analitycal.tool.Constants.PATH_TO_FILE;
 
 import java.util.List;
 
