@@ -1,16 +1,16 @@
 package com.example.analitycal.tool;
 
-import static com.example.analitycal.tool.Contstants.DD_MM_YYYY;
-import static com.example.analitycal.tool.Contstants.EMPTY_CHAR;
-import static com.example.analitycal.tool.Contstants.ONE;
-import static com.example.analitycal.tool.Contstants.REGEX_DASH;
-import static com.example.analitycal.tool.Contstants.REGEX_EMPTY_SPACE;
-import static com.example.analitycal.tool.Contstants.REGEX_P;
-import static com.example.analitycal.tool.Contstants.REGEX_PN;
-import static com.example.analitycal.tool.Contstants.REGEX_POINT;
-import static com.example.analitycal.tool.Contstants.STAR_STRING;
-import static com.example.analitycal.tool.Contstants.TWO;
-import static com.example.analitycal.tool.Contstants.ZERO;
+import static com.example.analitycal.tool.Constants.DD_MM_YYYY;
+import static com.example.analitycal.tool.Constants.EMPTY_CHAR;
+import static com.example.analitycal.tool.Constants.ONE;
+import static com.example.analitycal.tool.Constants.REGEX_DASH;
+import static com.example.analitycal.tool.Constants.REGEX_EMPTY_SPACE;
+import static com.example.analitycal.tool.Constants.REGEX_P;
+import static com.example.analitycal.tool.Constants.REGEX_PN;
+import static com.example.analitycal.tool.Constants.REGEX_POINT;
+import static com.example.analitycal.tool.Constants.STAR_STRING;
+import static com.example.analitycal.tool.Constants.TWO;
+import static com.example.analitycal.tool.Constants.ZERO;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class Analyzer {
-    Logger logger = Logger.getLogger(Analyzer.class.getName());
+    private final Logger logger = Logger.getLogger(Analyzer.class.getName());
 
     public List<String> checkQuery(SortedLinesLists sortedLinesLists) {
         logger.info("Starting to read lines");
