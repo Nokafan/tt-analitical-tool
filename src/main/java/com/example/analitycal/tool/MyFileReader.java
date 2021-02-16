@@ -1,0 +1,32 @@
+package com.example.analitycal.tool;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.logging.Logger;
+
+public class MyFileReader {
+    Logger logger = Logger.getLogger(MyFileReader.class.getName());
+    SortedLinesLists sortedLinesLists = new SortedLinesLists();
+
+    public SortedLinesLists readLines(String path) {
+        logger.info("Starting to read lines");
+        try {
+            BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(path));
+            String line = bufferedReader.readLine();
+            while (line != null) {
+                if (line.charAt(0) == 'C') {
+                    sortedLinesLists.getResponceLines().add(line);
+                } else if (line.charAt(0) == 'D') {
+                    sortedLinesLists.getRequestLines().add(line);
+                }
+                line = bufferedReader.readLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("File not found! " + path);
+        }
+        logger.info("Finished to read lines");
+        return sortedLinesLists;
+    }
+}
