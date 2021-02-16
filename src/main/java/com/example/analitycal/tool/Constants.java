@@ -1,6 +1,6 @@
 package com.example.analitycal.tool;
 
-public class Contstants {
+public class Constants {
     public static final String PATH_TO_FILE = "src/main/resources/input.txt";
     public static final String DD_MM_YYYY = "dd.MM.yyyy";
     public static final String STAR_STRING = "*";
