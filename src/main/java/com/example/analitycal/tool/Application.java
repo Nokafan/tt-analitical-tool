@@ -1,13 +1,15 @@
 package com.example.analitycal.tool;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import static com.example.analitycal.tool.Contstants.PATH_TO_FILE;
 
-@SpringBootApplication
+import java.util.List;
+
 public class Application {
-
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        MyFileReader fileReader = new MyFileReader();
+        SortedLinesLists sortedLinesLists = fileReader.readLines(PATH_TO_FILE);
+        Analyzer analyzer = new Analyzer();
+        List<String> results = analyzer.checkQuery(sortedLinesLists);
+        results.forEach(System.out::println);
     }
-
 }
