@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 import java.util.logging.Logger;
 
 public class MyFileReader {
-    Logger logger = Logger.getLogger(MyFileReader.class.getName());
-    SortedLinesLists sortedLinesLists = new SortedLinesLists();
+    private final Logger logger = Logger.getLogger(MyFileReader.class.getName());
+    private final SortedLinesLists sortedLinesLists = new SortedLinesLists();
 
     public SortedLinesLists readLines(String path) {
         logger.info("Starting to read lines");

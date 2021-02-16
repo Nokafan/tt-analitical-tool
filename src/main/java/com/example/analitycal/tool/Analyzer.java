@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class Analyzer {
-    Logger logger = Logger.getLogger(Analyzer.class.getName());
+    private final Logger logger = Logger.getLogger(Analyzer.class.getName());
 
     public List<String> checkQuery(SortedLinesLists sortedLinesLists) {
         logger.info("Starting to read lines");
