@@ -8,8 +8,10 @@ public class Constants {
     public static final String REGEX_POINT = "\\.";
     public static final String REGEX_P = "P";
     public static final String REGEX_PN = "[PN]";
-    public static final char EMPTY_CHAR = ' ';
     public static final String REGEX_DASH = "-";
+    public static final char EMPTY_CHAR = ' ';
+    public static final char CHAR_C = 'C';
+    public static final char CHAR_D = 'D';
     public static final int ZERO = 0;
     public static final int ONE = 1;
     public static final int TWO = 2;
