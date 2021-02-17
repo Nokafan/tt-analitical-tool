@@ -1,5 +1,8 @@
 package com.example.analitycal.tool;
 
+import static com.example.analitycal.tool.Constants.CHAR_C;
+import static com.example.analitycal.tool.Constants.CHAR_D;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,9 +19,9 @@ public class MyFileReader {
             BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(path));
             String line = bufferedReader.readLine();
             while (line != null) {
-                if (line.charAt(0) == 'C') {
+                if (line.charAt(0) == CHAR_C) {
                     sortedLinesLists.getResponceLines().add(line);
-                } else if (line.charAt(0) == 'D') {
+                } else if (line.charAt(0) == CHAR_D) {
                     sortedLinesLists.getRequestLines().add(line);
                 }
                 line = bufferedReader.readLine();
